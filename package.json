@@ -1,0 +1,74 @@
+{
+  "name": "@yours/models",
+  "version": "0.1.0",
+  "description": "Verified model delivery, Ed25519 manifest verification, resumable OPFS storage vault, and WebGPU hardware prober SDK for Chrome MV3 and web demos.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./contracts": {
+      "types": "./dist/contracts.d.ts",
+      "import": "./dist/contracts.js"
+    },
+    "./manifest": {
+      "types": "./dist/manifest/index.d.ts",
+      "import": "./dist/manifest/index.js"
+    },
+    "./download": {
+      "types": "./dist/download/index.d.ts",
+      "import": "./dist/download/index.js"
+    },
+    "./vault": {
+      "types": "./dist/vault/index.d.ts",
+      "import": "./dist/vault/index.js"
+    },
+    "./hardware": {
+      "types": "./dist/hardware/index.d.ts",
+      "import": "./dist/hardware/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "ARCHITECTURE.md",
+    "CONTRIBUTING.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "webgpu",
+    "opfs",
+    "ed25519",
+    "merkle-tree",
+    "model-delivery",
+    "chrome-mv3",
+    "yours-research",
+    "pragma"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yours-research/yours-models.git"
+  },
+  "homepage": "https://yours.sh",
+  "bugs": {
+    "url": "https://github.com/yours-research/yours-models/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.19",
+    "typescript": "^5.7.2",
+    "vitest": "^3.0.4"
+  }
+}
